@@ -1,0 +1,14 @@
+# Directories
+bin/
+obj/
+packages/
+Droid/obj
+xamarin/Components
+node_modules
+Droid/bin
+# globs
+*.DS_Store
+IDD.userprefs
+idd_api2/.DS_Store
+idd_api2/vendor
+idd_api2/.idea

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="IDD.OtrosPage">
+	<ContentPage.Content>
+         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="2"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="2"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="2"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackLayout Margin="20,0" Orientation="Horizontal">
+                <Image Source="ic_otros_transp" />
+                <Label Text="Transparencia"
+                    VerticalOptions="Center"
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource AzulColor}"
+                    FontSize="15"
+                />
+                <Image Rotation="-90" Source="calendario_flecha_abajo" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            <BoxView BackgroundColor="{StaticResource GrisColor}" Grid.Row="1" />
+
+            <StackLayout Grid.Row="2" Margin="20,0" x:Name="stkTerminosYCondiciones" Orientation="Horizontal">
+                <Image Source="ic_otros_terminos" />
+                <Label Text="Términos y Condiciones"
+                    VerticalOptions="Center"
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource AzulColor}"
+                    FontSize="15"
+                />
+                <Image Rotation="-90" Source="calendario_flecha_abajo" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            <BoxView BackgroundColor="{StaticResource GrisColor}" Grid.Row="3" />
+
+            <StackLayout Grid.Row="4" Margin="20,0" Orientation="Horizontal">
+                <Image Source="ic_otros_tributos" />
+                <Label Text="Consulta de tributos"
+                    VerticalOptions="Center"
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource AzulColor}"
+                    FontSize="15"
+                />
+                <Image Rotation="-90" Source="calendario_flecha_abajo" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            <BoxView BackgroundColor="{StaticResource GrisColor}" Grid.Row="5" />
+        </Grid>
+	</ContentPage.Content>
+</ContentPage>

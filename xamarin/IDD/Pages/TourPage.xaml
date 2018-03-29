@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="IDD.TourPage">
+	<ContentPage.Content>
+		<ListView HasUnevenRows="true" BackgroundColor="{StaticResource AzulColor}" x:Name="listTour" SeparatorVisibility="None">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+					<StackLayout Padding="0,0,0,10">
+						<Image BackgroundColor="Blue" Aspect="AspectFill" Source="{Binding bg_image}"></Image>
+						<Label Margin="10,0" FontAttributes="Bold" TextColor="Yellow" FontSize="12" Text="{Binding title}"></Label>
+						<Label Margin="10,0" TextColor="White" FontSize="10" Text="{Binding description}"></Label>
+					</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>

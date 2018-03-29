@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:IDD"
+    x:Class="IDD.CrearReclamoPage">
+	<ContentPage.Content>
+
+         <AbsoluteLayout>
+            <Grid AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                Margin="0,10,0,0"
+                >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"></RowDefinition>
+                    <RowDefinition Height="1"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid Margin="50,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image x:Name="imgTab" Grid.ColumnSpan="3" Source="ic_reporte_1" />
+
+                    <Button Clicked="Uno_Clicked" x:Name="btnUno" BackgroundColor="Transparent" />
+                    <Button Clicked="Dos_Clicked" Grid.Column="1" BackgroundColor="Transparent" />
+                    <Button Clicked="Tres_Clicked" Grid.Column="2" BackgroundColor="Transparent" />
+                </Grid>
+
+
+
+                <BoxView BackgroundColor="{StaticResource GrisColor}" Grid.Row="1" />
+
+                <!--GRID PRINCIPAL-->
+                <Grid Margin="0,10,0,0" Grid.Row="2">
+
+                    <!--MAPA-->
+                    <AbsoluteLayout>
+                        <Grid x:Name="gMap" Margin="0,0,0,10"
+                            AbsoluteLayout.LayoutFlags="All"
+                            AbsoluteLayout.LayoutBounds="0,0,1,1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="14"></RowDefinition>
+                                <RowDefinition Height="20"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Dirección de reclamo"
+                                Grid.Row="2"
+                                FontSize="15"
+                                Margin="25,0"
+                                TextColor="Gray"/>
+
+                            <Entry Grid.Row="3" Margin="20,0"
+                                Placeholder="Ej: Esquina Penza"
+                                TextColor="{StaticResource AzulColor}"
+                                FontSize="16"
+                                VerticalOptions="StartAndExpand"
+                            x:Name="txtReferencia"></Entry>
+                        </Grid>
+
+                        <Image x:Name="imgCurrent" Source="ic_mapa_aqui" 
+                            AbsoluteLayout.LayoutFlags="PositionProportional"
+                            AbsoluteLayout.LayoutBounds=".95,.05,40,40"  />
+                    </AbsoluteLayout>
+                    <!--FIN MAPA-->
+
+                    <!--STACK CAUSA MULTIMEDIA-->
+                    <local:GridImagenView 
+                        IsVisible="false"
+                        x:Name="stackMultimediaCausa">
+                    </local:GridImagenView>
+                    <!--FIN STACK CAUSA MULTIMEDIA-->
+
+                    <!--DATOS-->
+                    <Grid IsVisible="false" VerticalOptions="FillAndExpand"
+                        x:Name="gDatos" >
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="14"></RowDefinition>
+                            <RowDefinition Height="32"></RowDefinition>
+                            <RowDefinition Height="14"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                            <RowDefinition Height="14"></RowDefinition>
+                            <RowDefinition Height="32"></RowDefinition>
+                            <RowDefinition Height="32"></RowDefinition>
+                            <RowDefinition Height="32"></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label Text="¿Cual es el reclamo?"
+                            FontSize="12"
+                            Margin="25,0"
+                            TextColor="Gray"/>
+
+                        <local:EntryRoundedRenderer  Grid.Row="1"
+                            x:Name="txtTitulo"
+                            Margin="25,0"
+                            HeightRequest="35"
+                            Placeholder="ej: árbol caído"
+                            BackgroundColor="{StaticResource GrisColor}"
+                            TextColor="Black"
+                            FontSize="12"
+                            VerticalOptions="Start"/>
+
+
+                        <Label Text="Describe el reclamo"
+                            FontSize="12"
+                            Grid.Row="2"
+                            Margin="25,0"
+                            TextColor="Gray"/>
+
+                        <local:EditorRoundedRenderer
+                            Margin="25,0"
+                            Grid.Row="3"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            Placeholder="Ej: el árbol obstruye la vía principal"
+                            FontSize="12"
+                            TextColor="Gray"
+                            x:Name="editorDescription"
+                            >
+                            <StackLayout.BackgroundColor>                 
+                                <OnPlatform x:TypeArguments="Color"                                         
+                                    Android="Transparent"                                      
+                                    iOS="{StaticResource GrisColor}">
+                                </OnPlatform>         
+                            </StackLayout.BackgroundColor>
+                        </local:EditorRoundedRenderer>
+
+                        <BoxView BackgroundColor="{StaticResource GrisColor}" 
+                            VerticalOptions="Center"
+                            Grid.Row="4" 
+                            HeightRequest="1" />
+                        <Image Grid.Row="4" Source="ic_reporte_informacion" />
+                        <!-- Información de usuario -->
+
+						
+                        <Label Grid.Row="5" Text="Ingresa tus datos para conocer el estado del reclamo"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            TextColor="{StaticResource AzulColor}"
+							FontSize="10"
+						/>
+
+                        <local:EntryRoundedRenderer  Grid.Row="6"
+                            x:Name="txtNombre"
+                            Margin="25,0"
+                            HeightRequest="35"
+                            Placeholder="Nombre Apellido"
+                            BackgroundColor="{StaticResource GrisColor}"
+                            TextColor="Black"
+                            FontSize="12"
+                            VerticalOptions="Start"/>
+
+                        <local:EntryRoundedRenderer  Grid.Row="7"
+                            x:Name="txtMail"
+                            Margin="25,0"
+                            HeightRequest="35"
+                            Placeholder="Mail"
+                            BackgroundColor="{StaticResource GrisColor}"
+                            TextColor="Black"
+                            FontSize="12"
+                            VerticalOptions="Start"/>
+
+                        <local:EntryRoundedRenderer  Grid.Row="8"
+                            x:Name="txtTelefono"
+                            Margin="25,0"
+                            HeightRequest="35"
+                            Placeholder="Teléfono"
+                            BackgroundColor="{StaticResource GrisColor}"
+                            TextColor="Black"
+                            FontSize="12"
+                            VerticalOptions="Start"
+                           />
+
+                        <StackLayout HeightRequest="50" Grid.Row="9"
+                            x:Name="stkEnviar"
+                            BackgroundColor="{StaticResource AmarilloColor}"
+                            VerticalOptions="EndAndExpand">
+
+                            <Label Text="Enviar reclamo"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalTextAlignment="Center"
+                                TextColor="{StaticResource AzulColor}"/>
+                            
+                        </StackLayout>
+                        
+                    </Grid>
+                    <!--DATOS-->
+                    
+                </Grid>
+                <!--GRID PRINCIPAL-->
+                
+            </Grid>
+            <!--LOADING-->
+            <BoxView x:Name="boxIndicator"
+                BackgroundColor="Gray"
+                Opacity="0.6"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0,1,1">
+            </BoxView>
+            <ActivityIndicator
+                Color="White"
+                Opacity="0.8"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                AbsoluteLayout.LayoutBounds=".5,.5,50,50" 
+                x:Name="actIndicator" />
+            <!--LOADING-->
+        </AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

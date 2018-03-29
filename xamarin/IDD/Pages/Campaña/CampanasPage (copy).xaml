@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="IDD.CampanasPage"
+    BackgroundColor="{StaticResource GrisColor}">
+	<ContentPage.Content>
+         <AbsoluteLayout>
+            <Grid AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0,1,1">
+
+                <ListView VerticalOptions="FillAndExpand" HasUnevenRows="true"
+                    x:Name="listCampana" 
+                    SeparatorVisibility="None"
+                    Margin="10,10"
+                    BackgroundColor="{StaticResource GrisColor}"
+                    >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Grid BackgroundColor="White">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"></ColumnDefinition>
+                                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Margin="10,10" HeightRequest="80" 
+                                        Aspect="AspectFill" 
+                                        Source="{Binding foto_url}"></Image>
+
+                                        <Grid Margin="0,10" Grid.Column="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="13"></RowDefinition>
+                                                <RowDefinition Height="*"></RowDefinition>
+                                                <RowDefinition Height="13"></RowDefinition>
+                                                <RowDefinition Height="13"></RowDefinition>
+                                            </Grid.RowDefinitions>
+
+                                            <Label Text="{Binding titulo}"
+                                                TextColor="{StaticResource AzulColor}"
+                                                FontSize="12"
+                                                FontAttributes="Bold"
+                                            />
+
+                                            <Label Grid.Row="1" Text="{Binding descripcion}"
+                                                TextColor="{StaticResource AzulColor}"
+                                                FontSize="12" StyleClass="Default"
+                                                LineBreakMode="WordWrap"
+                                            />
+
+                                            <Label Grid.Row="2" Text="{Binding likes, StringFormat='Likes: {0}'}"
+                                                TextColor="{StaticResource AquaColor}"
+                                                FontSize="12"
+                                                FontAttributes="Bold"
+                                            />
+
+                                            <Label Grid.Row="3" Text="{Binding cantidad_comentarios, StringFormat='Comentarios: {0}'}"
+                                                TextColor="{StaticResource AquaColor}"
+                                                FontSize="12"
+                                                FontAttributes="Bold"
+                                            />
+                                        </Grid>
+                                    </Grid>
+                                    <BoxView HeightRequest="3"
+                                    BackgroundColor="{StaticResource GrisColor}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+            </Grid>
+            <!--LOADING-->
+            <BoxView x:Name="boxIndicator"
+                BackgroundColor="Gray"
+                Opacity="0.6"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0,1,1">
+            </BoxView>
+            <ActivityIndicator
+                Color="White"
+                Opacity="0.8"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                AbsoluteLayout.LayoutBounds=".5,.5,50,50" 
+                x:Name="actIndicator" />
+            <!--LOADING-->
+        </AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

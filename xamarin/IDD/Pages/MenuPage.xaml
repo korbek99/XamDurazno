@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="IDD.MenuPage"
+	Padding="0,40,0,0"
+		Icon="menu_lateral.png"
+		Title="Intendencia Durazno"
+		BackgroundColor="{StaticResource AzulColor}"
+		xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+		xmlns:local="clr-namespace:IDD">
+	<ContentPage.Content>
+		<ScrollView>
+			<Grid >
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="Auto"></RowDefinition>
+					<RowDefinition Height="1"></RowDefinition>
+					<RowDefinition Height="320"></RowDefinition>
+					<RowDefinition Height="*"></RowDefinition>
+					<RowDefinition Height="10"></RowDefinition>
+				</Grid.RowDefinitions>
+				<StackLayout Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+					<controls:CircleImage x:Name="imgPerfil" Source="{Binding UrlImage}" Aspect="AspectFill">
+					  <controls:CircleImage.WidthRequest>
+					    <OnPlatform x:TypeArguments="x:Double"
+					      iOS="120"
+					      Android="120"
+					      WinPhone="75"/>
+					   </controls:CircleImage.WidthRequest>
+					<controls:CircleImage.HeightRequest>
+					    <OnPlatform x:TypeArguments="x:Double"
+					      iOS="120"
+					      Android="120"
+					      WinPhone="75"/>
+					   </controls:CircleImage.HeightRequest>
+					</controls:CircleImage>
+					<Label x:Name="lblName" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White" FontSize="12" Text="¡Bienvenido!"></Label>
+				</StackLayout>
+				<!--<local:ButtonFace Grid.Row="1" x:Name="btnFace"
+							Text="Conectate con facebook"
+							TextColor="White"
+							Image="facebook"
+							BorderRadius="15"
+							HorizontalOptions="Center"
+							BorderColor="White"
+						>
+						<local:ButtonFace.HeightRequest>
+							<OnPlatform x:TypeArguments="x:Double"
+							      iOS="25"
+							      Android="50"/>
+						</local:ButtonFace.HeightRequest>
+
+						<local:ButtonFace.WidthRequest>
+							<OnPlatform x:TypeArguments="x:Double"
+							      iOS="220"
+							      Android="220"/>
+						</local:ButtonFace.WidthRequest>
+						<local:ButtonFace.FontSize>
+							<OnPlatform x:TypeArguments="x:Double"
+							      iOS="15"
+							      Android="8"/>
+						</local:ButtonFace.FontSize>
+				</local:ButtonFace>-->
+
+				<Image Grid.Row="1" x:Name="btnRegistrar" Source="registrate"/>
+				<Button Grid.Row="1" Clicked="LogOut_Clicked" x:Name="btnLogOut"
+					Text="Cerrar Session" 
+						FontSize="12"
+					TextColor="White" 
+					BackgroundColor="Transparent"
+					IsVisible="false"
+					/>
+
+                <!--<local:FacebookForms Grid.Row="1" x:Name="btnFace"
+                    HorizontalOptions="Center">
+                </local:FacebookForms>-->
+				<BoxView BackgroundColor="Gray" Grid.Row="2" HeightRequest="1" HorizontalOptions="FillAndExpand"></BoxView>
+				<StackLayout Grid.Row="3" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+					<ListView BackgroundColor="{StaticResource AzulColor}" Margin="10,0,10,0" x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="None">
+						<ListView.ItemTemplate>
+							<DataTemplate>
+								<ViewCell>
+									<Grid>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="40"></ColumnDefinition>
+											<ColumnDefinition Width="*"></ColumnDefinition>
+										</Grid.ColumnDefinitions>
+										<Image Margin="10, 10" Source="{Binding IconSource}"></Image>
+										<Label VerticalOptions="Center" HorizontalTextAlignment="Start" FontSize="13" TextColor="White"  Grid.Column="1" Text="{Binding Title}"></Label>
+									</Grid>
+								</ViewCell>
+							</DataTemplate>
+						</ListView.ItemTemplate>
+					</ListView>
+				</StackLayout>
+
+				<StackLayout Grid.Row="4" VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+					<Label HorizontalOptions="Center" Text="Próximamente" TextColor="{StaticResource AmarilloColor}" FontSize="20" FontAttributes="Bold"></Label>
+					<Grid Margin="10,0,10,0">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*"></RowDefinition>
+							<RowDefinition Height="*"></RowDefinition>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="40"></ColumnDefinition>
+							<ColumnDefinition Width="*"></ColumnDefinition>
+						</Grid.ColumnDefinitions>
+						<!--<Image Grid.Row="0" Margin="10, 10" Source="menu_entierro"></Image>-->
+						<!--<Label Grid.Row="0" Margin="0,12" FontSize="13" TextColor="White"  Grid.Column="1" Text="Entierro de Carnaval"></Label>-->
+
+						<Image Grid.Row="0" Margin="10, 10" Source="menu_tramites"></Image>
+						<Label Grid.Row="0" Margin="0,12" FontSize="13" TextColor="White"  Grid.Column="1" Text="Trámites en línea"></Label>
+					</Grid>
+					<Label FontSize="10" HorizontalOptions="Center" Text="Versión 1.0" x:Name="lblVersion" TextColor="White"></Label>
+				</StackLayout>
+			</Grid>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

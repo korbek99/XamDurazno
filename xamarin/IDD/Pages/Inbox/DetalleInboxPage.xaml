@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="IDD.DetalleInboxPage">
+	<ContentPage.Content>
+
+		  <AbsoluteLayout>
+            <Grid AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0,1,1">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="35*"></RowDefinition>
+                </Grid.RowDefinitions>
+				 <StackLayout Margin="20,10" >
+                     <Label
+                        x:Name="lblTitle"
+                        FontSize="14"
+						FontFamily="Arial"
+                        FontAttributes="Bold"
+                    />
+                  </StackLayout>
+				
+                <StackLayout Margin="20,0" Grid.Row="1">
+                    <Label 
+                        x:Name="lblCreatedAt"
+                        TextColor="{StaticResource AquaColor}"
+                        FontSize="14"
+						FontFamily="Arial"
+                        FontAttributes="Bold"
+                    />
+                  </StackLayout>
+				 <StackLayout Margin="20,0" Grid.Row="2">
+                    <Label Text=""
+                        x:Name="lblMessage"
+                        TextColor="{StaticResource GrisDarkColor}"
+                        FontSize="14"
+						FontFamily="Arial"
+                        FontAttributes="Bold"
+                    />
+                  </StackLayout>
+   
+			</Grid>
+		</AbsoluteLayout>
+
+			
+	</ContentPage.Content>
+</ContentPage>

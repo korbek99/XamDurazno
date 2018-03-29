@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="IDD.InitPage"
+	MasterBehavior="Popover"
+		xmlns:local="clr-namespace:IDD">
+	<MasterDetailPage.Master>
+		<local:MenuPage x:Name="menuPage" />
+	</MasterDetailPage.Master>
+	<MasterDetailPage.Detail>
+		<NavigationPage x:Name="NavigationHistory" BarBackgroundColor="{StaticResource AzulColor}">
+			<x:Arguments>
+				<local:MainPage></local:MainPage>
+			</x:Arguments>
+		</NavigationPage>
+	</MasterDetailPage.Detail>
+</MasterDetailPage>

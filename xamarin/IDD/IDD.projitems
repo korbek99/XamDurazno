@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{3AA6A9A6-B693-448C-A2E8-EA1A9601F36B}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>IDD</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\InitPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\FacebookPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\TourPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Accordion\CalendarioPagoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Noticias\DetalleNoticiaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Noticias\NoticiasPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\WebViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Login\RegistroPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Login\ContraseñaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Login\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Login\RecuperarContraseñaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Login\CreaContraseñaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Campaña\CampanasPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\PdfViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Campaña\DetalleCampanaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Campaña\ComentarioPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Reclamos\MisReclamosPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Reclamos\ReclamoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\OtrosPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CrearReclamoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Inbox\Inbox.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\Inbox\DetalleInboxPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\InitPage.xaml.cs">
+      <DependentUpon>InitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MenuItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FestivalItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\ButtonFace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\FacebookPage.xaml.cs">
+      <DependentUpon>FacebookPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserFB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\VersionService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Version.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\FbService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\TourPage.xaml.cs">
+      <DependentUpon>TourPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)OtherFunction\DoubleExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\ButtonTelefono.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\ImageLocal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Accordion\Accordion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Accordion\CalendarioPagoPage.xaml.cs">
+      <DependentUpon>CalendarioPagoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Rubro.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Cuota.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Accordion\ListCuotas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Noticia.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ReutilizableView\ListaNoticias.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Noticias\DetalleNoticiaPage.xaml.cs">
+      <DependentUpon>DetalleNoticiaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Noticias\NoticiasPage.xaml.cs">
+      <DependentUpon>NoticiasPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\StackLocal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Foto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\WebViewPage.xaml.cs">
+      <DependentUpon>WebViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Service\NoticiaService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\GlobalHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\ServiceBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\RubroService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\FacebookForms.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\FacebookCross.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Settings\GeneralSetting.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Login\RegistroPage.xaml.cs">
+      <DependentUpon>RegistroPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\EntryRoundedRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Login\ContraseñaPage.xaml.cs">
+      <DependentUpon>ContraseñaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Login\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Login\RecuperarContraseñaPage.xaml.cs">
+      <DependentUpon>RecuperarContraseñaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Login\CreaContraseñaPage.xaml.cs">
+      <DependentUpon>CreaContraseñaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Campana.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\CampanaService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Campaña\CampanasPage.xaml.cs">
+      <DependentUpon>CampanasPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\PdfViewPage.xaml.cs">
+      <DependentUpon>PdfViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Campaña\DetalleCampanaPage.xaml.cs">
+      <DependentUpon>DetalleCampanaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\EditorRoundedRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Campaña\ComentarioPage.xaml.cs">
+      <DependentUpon>ComentarioPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Service\ReclamoService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Reclamo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Reclamos\MisReclamosPage.xaml.cs">
+      <DependentUpon>MisReclamosPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Reclamos\ReclamoPage.xaml.cs">
+      <DependentUpon>ReclamoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\OtrosPage.xaml.cs">
+      <DependentUpon>OtrosPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CrearReclamoPage.xaml.cs">
+      <DependentUpon>CrearReclamoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ReutilizableView\GridImagenView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\Imagen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\CamaraHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\MapTapRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\UserService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\CurvedCornersLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommonInterfaces\IPushNotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Inbox\Inbox.xaml.cs">
+      <DependentUpon>Inbox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Service\InboxService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Inbox\DetalleInboxPage.xaml.cs">
+      <DependentUpon>DetalleInboxPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ControlRender\WebViewRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Configuracion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Service\ConfiguracionService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommonInterfaces\IResetPassword.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ResetPassword.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Service\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ControlRender\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Settings\" />
+    <Folder Include="$(MSBuildThisFileDirectory)OtherFunction\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\Accordion\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ReutilizableView\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\Noticias\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\Login\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\Campaña\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\Reclamos\" />
+    <Folder Include="$(MSBuildThisFileDirectory)CommonInterfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\Inbox\" />
+  </ItemGroup>
+</Project>
